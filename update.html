@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update an organization</title>
+    <script src="updateScript.js"></script>
+</head>
+<body>
+<div>
+    <p><b>Put the data in the form and press "Add":</b></p>
+    <form>
+        <p> Enter organisation ID: <br>
+            <input type="number" name="orgId"> <br>
+        </p>
+        <p> Enter organisation name: <br>
+            <input type="text" name="orgName"> <br>
+        </p>
+        <p> Enter organisation coordinates: <br>
+            <input type="number" name="coordX"> X <br>
+            <input type="number" name="coordY"> Y <br>
+        </p>
+        <p> Enter creation date <br>
+            <input type="date" name="creationDate"> <br>
+        </p>
+        <p>
+            <input type="radio" name="type" value="public"> Public <br>
+            <input type="radio" name="type" value="trust"> Trust <br>
+            <input type="radio" name="type" value="privLimited"> Private Limited <br>
+        </p>
+        <p> Enter official address: <br>
+            <input type="text" name="offAddress"> <br>
+        </p>
+        <button onclick="updateElement()">Update</button>
+    </form>
+    <a href="home.html">Home page</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+<div>
+    <p><b>Collection management</b></p>
+
+    <p>List of organisations:</p>
+    <table border="1" id="maintable">
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th> Coordinates </th>
+            <th> Creation Date </th>
+            <th> Annual Turnover </th>
+            <th> Type </th>
+            <th> Official Address </th>
+        </tr>
+
+    </table>
+</div>
+<script src="collection_management.js"></script>
+<div>
+    <form action="add.html">
+        <button>Add an organization</button>
+    </form>
+    <form action="delete.html">
+        <button>Delete an organization</button>
+    </form>
+    <form action="update.html">
+        <button>Update an organization</button>
+    </form>
+    <form action="get.html">
+        <button>Get a certain organization info</button>
+    </form>
+</div>
+</body>
+</html>
