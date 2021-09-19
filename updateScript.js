@@ -1,8 +1,9 @@
-function addElement() {
-    let url = "http://localhost:8081/organizations";
+function updateElement() {
+    let url = "http://localhost:8081/organizations/";
     let xmlhttp = new XMLHttpRequest();
     let params = 'name=';
 
+    let id = document.getElementById('orgId').value;
     let name = document.getElementById('orgName').value;
     let coordinatex = document.getElementById('coordX').value;
     let coordinatey = document.getElementById('coordY').value;
@@ -19,16 +20,18 @@ function addElement() {
     }
     let officialAddress = document.getElementById('offAddress').value;
 
+    url += id;
+
     params += name + '&coordinatex=' + coordinatex + '&coordinatey=' + coordinatey + '&creationDate=' + creationDate +
         '&type=' + type + '&officialAddress=' + officialAddress;
 
 
     xmlhttp.open('POST', url, false);
     xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        //, document.getElementById('orgName').value)
+    //, document.getElementById('orgName').value)
     xmlhttp.send(params);
 
-    //TODO: implement an answering message for adding
+    //TODO: implement an answering message for updating
     //const table = document.getElementById('mainmodule');
     //let my_html = '';
     //table.innerHTML += my_html;

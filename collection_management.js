@@ -1,4 +1,4 @@
-let url = "http://localhost:8081/add/some";
+let url = "http://localhost:8081/organizations";
 let reqstr = "Some info goes here."
 let xmlhttp = new XMLHttpRequest();
 
