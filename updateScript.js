@@ -5,6 +5,7 @@ function updateElement() {
 
     let id = document.getElementById('orgId').value;
     let name = document.getElementById('orgName').value;
+    /*
     let coordinatex = document.getElementById('coordX').value;
     let coordinatey = document.getElementById('coordY').value;
     let creationDate = document.getElementById('creationDate').value;
@@ -20,10 +21,13 @@ function updateElement() {
     }
     let officialAddress = document.getElementById('offAddress').value;
 
+     */
+
     url += id;
 
-    params += name + '&coordinatex=' + coordinatex + '&coordinatey=' + coordinatey + '&creationDate=' + creationDate +
-        '&type=' + type + '&officialAddress=' + officialAddress;
+    params += name;
+        //+ '&coordinatex=' + coordinatex + '&coordinatey=' + coordinatey + '&creationDate=' + creationDate +
+        //'&type=' + type + '&officialAddress=' + officialAddress;
 
 
     xmlhttp.open('POST', url, false);
