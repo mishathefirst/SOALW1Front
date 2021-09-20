@@ -6,9 +6,6 @@ function deleteElement() {
     let objToDelete = document.getElementById('orgNumber').value;
     url += objToDelete;
 
-    alert(objToDelete);
-    alert(url);
-
     xmlhttp.open("DELETE", url, false);
     xmlhttp.setRequestHeader("Content-Type", "text/plain");
     xmlhttp.send(reqstr);

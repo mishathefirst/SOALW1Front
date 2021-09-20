@@ -18,8 +18,10 @@ let annualturnover = xmldata.getElementsByTagName('annualturnover');
 let type = xmldata.getElementsByTagName('type');
 let street = xmldata.getElementsByTagName('street');
 let town = xmldata.getElementsByTagName('town');
-let locationx = xmldata.getElementsByTagName('locationx');
-let locationy = xmldata.getElementsByTagName('locationy');
+//let locationx = xmldata.getElementsByTagName('coordinatex');
+//let locationy = xmldata.getElementsByTagName('coordinatey');
+
+
 //let idstr = id[0].textContent;
 //let namestr = name[0].textContent;
 
@@ -28,11 +30,14 @@ let locationy = xmldata.getElementsByTagName('locationy');
 const table = document.getElementById('maintable');
 let my_html = '';
 
+
+
 for (let i = 0; i < elements.length; i++) {
     my_html += '<tr> ' + '<td> ' + id[i].textContent + ' </td> <td>' + name[i].textContent + ' </td> <td>' + coordinatex[i].textContent + ','
         + coordinatey[i].textContent + ' </td> <td>' + creationdate[i].textContent + ' </td> <td>' + annualturnover[i].textContent
-        + ' </td> <td>' + type[i].textContent + ' </td> <td>' + town[i].textContent + ',' + street[i].textContent + ',' + locationx[i].textContent
-        + ',' + locationy[i].textContent + '</td>' + '</tr>';
+        + ' </td> <td>' + type[i].textContent + ' </td> <td>' + town[i].textContent + ',' + street[i].textContent + '</td>' + '</tr>';
+        //+ ',' + locationx[i].textContent
+        //+ ',' + locationy[i].textContent + '</td>' + '</tr>';
 }
 //my_html += '<tr> ' + '<td> 1 </td> <td> Gazprom </td> <td> 1, 1 </td> <td> 1991 </td> <td> 5B dollars </td>' +
     //'<td> Public </td> <td> SPb </td>' + '</tr>';

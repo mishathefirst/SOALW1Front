@@ -19,6 +19,9 @@
         <p> Enter creation date <br>
             <input type="date" id="creationDate" name="creationDate"> <br>
         </p>
+        <p> Enter annual organization's turnover <br>
+            <input type="number" id="annualTurnover" name="annualTurnover"> <br>
+        </p>
         <p>
             <fieldset id="type">
                 <input type="radio" id="publicType" name="type" value="public"> Public <br>
@@ -26,8 +29,11 @@
                 <input type="radio" id="privLimitedType" name="type" value="privLimited"> Private Limited <br>
             </fieldset>
         </p>
-        <p> Enter official address: <br>
-            <input type="text" id="offAddress" name="offAddress"> <br>
+        <p> Enter official address (street): <br>
+            <input type="text" id="offAddressStreet" name="offAddressStreet"> <br>
+        </p>
+        <p> Enter official address (city/town): <br>
+            <input type="text" id="offAddressTown" name="offAddressTown"> <br>
         </p>
         <button onclick="addElement()">Add</button>
     </form>

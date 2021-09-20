@@ -7,6 +7,7 @@ function addElement() {
     let coordinatex = document.getElementById('coordX').value;
     let coordinatey = document.getElementById('coordY').value;
     let creationDate = document.getElementById('creationDate').value;
+    let annualTurnover = document.getElementById('annualTurnover').value;
     let type;
     if (document.getElementById("publicType").checked) {
         type = document.getElementById('publicType').value;
@@ -17,10 +18,11 @@ function addElement() {
     if (document.getElementById("privLimitedType").checked) {
         type = document.getElementById('privLimitedType').value;
     }
-    let officialAddress = document.getElementById('offAddress').value;
+    let officialAddressStreet = document.getElementById('offAddressStreet').value;
+    let officialAddressTown = document.getElementById('offAddressTown').value;
 
     params += name + '&coordinatex=' + coordinatex + '&coordinatey=' + coordinatey + '&creationDate=' + creationDate +
-        '&type=' + type + '&officialAddress=' + officialAddress;
+        '&annualTurnover=' + annualTurnover + '&type=' + type + '&street=' + officialAddressStreet + '&town=' + officialAddressTown;
 
 
     xmlhttp.open('POST', url, false);

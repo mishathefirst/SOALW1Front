@@ -30,10 +30,10 @@ function getElement() {
     let my_html = '';
 
 
-        my_html += 'Name: ' + name[0].textContent + ', Coordinates: ' + coordinatex[i].textContent + ','
-            + coordinatey[i].textContent + ', Creation date:' + creationdate[i].textContent + ', Annual Turnover: ' + annualturnover[i].textContent
-            + ', Organization type: ' + type[i].textContent + ', Address: ' + town[i].textContent + ',' + street[i].textContent + ',' + locationx[i].textContent
-            + ',' + locationy[i].textContent + '.';
+        my_html += '<p>' + 'Name: ' + name[0].textContent + ', Coordinates: ' + coordinatex[0].textContent + ','
+            + coordinatey[0].textContent + ', Creation date:' + creationdate[0].textContent + ', Annual Turnover: ' + annualturnover[0].textContent
+            + ', Organization type: ' + type[0].textContent + ', Address: ' + town[0].textContent + ',' + street[0].textContent + ',' + locationx[0].textContent
+            + ',' + locationy[0].textContent + '.' + '</p>';
 
-    table.innerHTML += my_html;
+    table.innerHTML = my_html;
 }
