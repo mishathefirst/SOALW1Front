@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Home page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
+    <script src="collection_management.js"></script>
 </head>
 <body>
 <div>
@@ -24,7 +24,9 @@
 
     </table>
 </div>
-<script src="collection_management.js"></script>
+
+<script>manage('default')</script>
+<!--<script>sort()</script>-->
 <div>
     <form action="add.html">
         <button>Add an organization</button>
@@ -38,6 +40,40 @@
     <form action="get.html">
         <button>Get a certain organization info</button>
     </form>
+    <div>
+        <form onsubmit="return false">
+            <p>Data sorting</p>
+            <p><input type="checkbox" id="sortbyname" name="sort" value="name">Sort by name</p>
+            <p><input type="checkbox" id="sortbyturnover" name="sort" value="turnover">Sort by annual turnover</p>
+            <p><input type="checkbox" id="sortbytype" name="sort" value="type">Sort by type</p>
+            <p><button onclick="sortIt()">Sort data</button></p>
+        </form>
+    </div>
+    <!--<button onclick="manage('sortname')">Sort by name</button>
+    <button onclick="manage('sortturnover')">Sort by annual turnover</button>
+    <button onclick="manage('sorttype')">Sort by type</button> <br>-->
+
+    <!--<form>
+        <input type="text"
+    </form>-->
+
+    <div>
+        <form onsubmit="return false">
+            <p>Data filtering</p>
+            <p><input type="text" id="filternameG" name="filter">Greater than name</p>
+            <p><input type="text" id="filternameGE" name="filter">Greater or equal to name</p>
+            <p><input type="text" id="filternameL" name="filter">Less than name</p>
+            <p><input type="text" id="filternameLE" name="filter">Less than or equal to name</p>
+            <p><input type="text" id="filternameE" name="filter">Equal to name</p>
+            <p><input type="text" id="filtercoordinatexG" name="filter">Greater than coordinate x</p>
+            <p><input type="text" id="filtercoordinatexGE" name="filter">Greater or equal to coordinate x</p>
+            <p><input type="text" id="filtercoordinatexL" name="filter">Less than coordinate x</p>
+            <p><input type="text" id="filtercoordinatexLE" name="filter">Less than or equal to coordinate x</p>
+            <p><input type="text" id="filtercoordinatexE" name="filter">Equal to coordinate x</p>
+
+            <p><button onclick="filterIt()">Filter data</button></p>
+        </form>
+    </div>
 </div>
 </body>
 </html>
